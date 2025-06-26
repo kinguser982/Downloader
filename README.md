@@ -17,6 +17,7 @@ its make ur file to several parts of RAR.
 6) click on "Run workflow"
 
 # it doesn't matter how big ur file is.
+![Screenshot 2025-06-26 184634](https://github.com/user-attachments/assets/6a1535bc-7029-43bf-b47a-6baa098952a0)
 
 # You can download ur file from her:
 Can be downloaded at [Release](../../releases)
