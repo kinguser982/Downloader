@@ -3,7 +3,7 @@ with this github actions u can Download or save files very easily and after long
 its make ur file to several parts of RAR.
 
 # how to use it???
-just click on actions and Downloader.
+just click on [actions] and [File-to-link].
 then paste the file link!!!
 
 
