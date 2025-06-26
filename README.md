@@ -10,10 +10,11 @@ its make ur file to several parts of RAR.
 
 3) click on "File-to-link" (on left side) 
 
-4) then paste the file link!!! 
+4) click on "Run workflow" (on right side)
 
-5) click on "Run workflow" (on right side)
+5) then paste the file link!!! 
 
+6) click on "Run workflow"
 
 # it doesn't matter how big ur file is.
 
