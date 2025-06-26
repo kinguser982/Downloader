@@ -3,8 +3,16 @@ with this github actions u can Download or save files very easily and after long
 its make ur file to several parts of RAR.
 
 # how to use it???
-just click on [Actions] and [File-to-link].
-then paste the file link!!!
+
+1) fork this repo
+
+2) click on "Actions"
+
+3) click on "File-to-link" (on left side) 
+
+4) then paste the file link!!! 
+
+5) click on "Run workflow" (on right side)
 
 
 # it doesn't matter how big ur file is.
