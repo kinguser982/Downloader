@@ -40,14 +40,14 @@ jobs:
         echo "FILE_SIZE=false" >> $GITHUB_ENV
         fi
     - name: Processing Big File
-      if: ${{ env.FILE_SIZE }} == 'true'
+      if: ${{ env.FILE_SIZE == 'true' }}
       run: |
         cd drive
         mv *.* Part.*
         rar a -v2000m Part.rar *
         ls -la
     - name: Processing Small File
-      if: ${{ env.FILE_SIZE }} == 'false'
+      if: ${{ env.FILE_SIZE == 'false' }}
       run: |
         cd drive
         mv *.* archive.*
