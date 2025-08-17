@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       FILE_LINK:
-        description: 'file link'
+        description: 'Link of File'
         required: true
         default: 'https://dlcdnets.asus.com/pub/ASUS/mb/14Utilities/Armoury_Crate_Full_Installation_Package.zip'
 
