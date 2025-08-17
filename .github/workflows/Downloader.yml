@@ -31,6 +31,7 @@ jobs:
         echo "FILE_ID=$(ls)" >> $GITHUB_ENV
     - name: Check file size
       run: |
+        cd drive
         if [[ $(stat -c '%s' *.*) -gt 2147483648 ]]; then
         echo "The File is larger than 2GB"
         echo "FILE_SIZE=big" >> $GITHUB_ENV
