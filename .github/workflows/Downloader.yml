@@ -34,20 +34,20 @@ jobs:
         cd drive
         if [[ $(stat -c '%s' *.*) -gt 2147483648 ]]; then
         echo "The File is larger than 2GB"
-        echo "FILE_SIZE=big" >> $GITHUB_ENV
+        echo "FILE_SIZE=true" >> $GITHUB_ENV
         else
         echo "File is smaller than or equal to 2GB"
-        echo "FILE_SIZE=small" >> $GITHUB_ENV
+        echo "FILE_SIZE=false" >> $GITHUB_ENV
         fi
     - name: Processing Big File
-      if: ${{ env.FILE_SIZE }} == 'big'
+      if: ${{ env.FILE_SIZE }} == 'true'
       run: |
         cd drive
         mv *.* Part.*
         rar a -v2000m Part.rar *
         ls -la
     - name: Processing Small File
-      if: ${{ env.FILE_SIZE }} == 'small'
+      if: ${{ env.FILE_SIZE }} == 'false'
       run: |
         cd drive
         mv *.* archive.*
