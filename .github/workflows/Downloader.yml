@@ -53,10 +53,10 @@ jobs:
         
     - name: Upload to Github
       uses: softprops/action-gh-release@v1
+      continue-on-error: true
       with:
         files: |
           drive/*.*
         name: ${{ env.FILE_ID }} // ${{ env.BUILD_DATE }}
         tag_name: ${{ github.run_id }}
         body: |
-        continue-on-error: true
