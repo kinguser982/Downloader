@@ -59,3 +59,4 @@ jobs:
         name: ${{ env.FILE_ID }} // ${{ env.BUILD_DATE }}
         tag_name: ${{ github.run_id }}
         body: |
+        continue-on-error: true
