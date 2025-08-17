@@ -20,7 +20,6 @@ jobs:
 
     - name: Getting tools ready 
       run: |
-        sudo apt install rar
         sudo apt install wget
     
     - name: Downloading file from Oreginal website
@@ -42,17 +41,12 @@ jobs:
     - name: Processing Big File
       if: ${{ env.FILE_SIZE == 'true' }}
       run: |
+        sudo apt install rar
         cd drive
         mv *.* File.*
         rar a -v2000m Archive.rar *
         ls -la
-    - name: Processing Small File
-      if: ${{ env.FILE_SIZE == 'false' }}
-      run: |
-        cd drive
-        mv *.* Archive.*
-        rar a archive.rar *
-        ls -la
+        
     - name: Set Build Date 
       run: |
         echo "BUILD_DATE=$(date +%Y%m%d)" >> $GITHUB_ENV
@@ -61,7 +55,7 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         files: |
-          drive/*.rar
+          drive/*.*
         name: ${{ env.FILE_ID }} // ${{ env.BUILD_DATE }}
         tag_name: ${{ github.run_id }}
         body: |
