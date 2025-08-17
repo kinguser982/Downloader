@@ -44,7 +44,6 @@ jobs:
         cd drive
         mv *.* Part.*
         rar a -v2000m Part.rar *
-        rm ${{ env.FILE_ID }}
         ls -la
     - name: Processing Small File
       if: ${{ env.FILE_SIZE }} == 'small'
@@ -52,7 +51,6 @@ jobs:
         cd drive
         mv *.* archive.*
         rar a archive.rar *
-        rm ${{ env.FILE_ID }}
         ls -la
     - name: Set Build Date 
       run: |
@@ -62,7 +60,7 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         files: |
-          drive/*.*
+          drive/*.rar
         name: ${{ env.FILE_ID }} // ${{ env.BUILD_DATE }}
         tag_name: ${{ github.run_id }}
         body: |
