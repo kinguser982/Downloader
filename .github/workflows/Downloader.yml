@@ -43,14 +43,14 @@ jobs:
       if: ${{ env.FILE_SIZE == 'true' }}
       run: |
         cd drive
-        mv *.* Part.*
-        rar a -v2000m Part.rar *
+        mv *.* File.*
+        rar a -v2000m Archive.rar *
         ls -la
     - name: Processing Small File
       if: ${{ env.FILE_SIZE == 'false' }}
       run: |
         cd drive
-        mv *.* archive.*
+        mv *.* Archive.*
         rar a archive.rar *
         ls -la
     - name: Set Build Date 
